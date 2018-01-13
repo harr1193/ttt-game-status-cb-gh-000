@@ -24,11 +24,8 @@ def won?(board)
     pos_1 = board[win_index_1]
     pos_2 = board[win_index_2]
     pos_3 = board[win_index_3]
-
-    if position_taken(board, win_index_1) && position_taken(board, win_index_2) && position_taken(board, win_index_3)
-
-    else
-      return false
+    all_pos = [pos_1, pos_2, pos_3].each do |pos|
+      position_taken(board, pos)
     end
   end
 end
