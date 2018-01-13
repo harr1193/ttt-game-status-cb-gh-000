@@ -26,10 +26,10 @@ def won?(board)
     pos_3 = board[win_index_3]
 
     all_x = win_combination.all? |index| do
-      index == "X"
+      index.strip == "X"
     end
     all_y = win_combination.all? |index| do
-      index == "Y"
+      index.strip == "Y"
     end
   end
 end
