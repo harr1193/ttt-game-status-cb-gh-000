@@ -32,5 +32,8 @@ def won?(board)
       index.strip == "Y"
     end
     if all_x || all_y
+    else
+      false
+    end
   end
 end
