@@ -32,9 +32,9 @@ def won?(board)
       index == "Y"
     end
     if all_x || all_y
-      true
+      return true
     else
-      false
+      return false
     end
   end
 end
