@@ -24,12 +24,9 @@ def won?(board)
     pos_1 = board[win_index_1]
     pos_2 = board[win_index_2]
     pos_3 = board[win_index_3]
-
+    
     if position_taken(board, win_index_1) && position_taken(board, win_index_2) && position_taken(board, win_index_3)
-      all_pos = [pos_1, pos_2, pos_3].all? do |pos|
-        pos == "X" || pos == "Y"
-      end
-      all_pos ? (return win_combination) : (return false)
+      [pos_1, pos_2, pos_3].uniq.count == 1 ? (return win_combination) : (return false)
     else
       return false
     end
