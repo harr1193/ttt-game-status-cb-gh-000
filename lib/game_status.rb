@@ -25,12 +25,8 @@ def won?(board)
     pos_2 = board[win_index_2]
     pos_3 = board[win_index_3]
 
-    all_x = win_combination.all? do |index|
-      index == "X"
+    all_pos = [win_index_1, win_index_1, win_index_1].all? do |index|
+      position_taken?(board, win_index_1)
     end
-    all_y = win_combination.all? do |index|
-      index == "O"
-    end
-    all_x ? (return win_combination):(return false)
   end
 end
