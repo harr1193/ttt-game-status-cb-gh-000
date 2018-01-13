@@ -29,7 +29,7 @@ def won?(board)
       index == "X"
     end
     all_y = win_combination.all? do |index|
-      index == "Y"
+      index == "O"
     end
     all_x ? (return win_combination):(return false)
   end
