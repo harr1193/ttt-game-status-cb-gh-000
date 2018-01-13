@@ -25,10 +25,11 @@ def won?(board)
     pos_2 = board[win_index_2]
     pos_3 = board[win_index_3]
 
-    if pos_1 == "X" && pos_2 == "X" && pos_3 == "X"
-      return win_combination
-    else
-      false
+    all_x = win_combination.all? |index| do
+      index == "X"
+    end
+    all_y = win_combination.all? |index| do
+      index == "Y"
     end
   end
 end
