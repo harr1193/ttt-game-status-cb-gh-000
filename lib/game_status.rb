@@ -25,7 +25,7 @@ def won?(board)
     pos_2 = board[win_index_2]
     pos_3 = board[win_index_3]
     all_pos = [pos_1, pos_2, pos_3].each do |pos|
-      position_taken(board, pos)
+      position_taken?(board, pos)
     end
 
     if all_pos
