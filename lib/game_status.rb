@@ -28,10 +28,5 @@ def won?(board)
     all_pos = [win_index_1, win_index_1, win_index_1].all? do |index|
       position_taken?(board, pos)
     end
-    if all_pos
-      return true
-    else
-      return false
-    end
   end
 end
