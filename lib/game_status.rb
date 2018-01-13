@@ -31,6 +31,6 @@ def won?(board)
     all_y = win_combination.all? do |index|
       index == "Y"
     end
-    all_x || all_y ? (return win_combination):(return false)
+    all_x ? (return win_combination):(return false)
   end
 end
