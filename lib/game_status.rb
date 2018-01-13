@@ -28,6 +28,7 @@ def won?(board)
     all_pos = [win_index_1, win_index_1, win_index_1].all? do |index|
       position_taken?(board, index)
     end
+    puts all_pos
   end
 end
 
