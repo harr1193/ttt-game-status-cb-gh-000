@@ -26,7 +26,7 @@ def won?(board)
     pos_3 = board[win_index_3]
 
     if position_taken(board, win_index_1) && position_taken(board, win_index_2) && position_taken(board, win_index_3)
-      
+
     else
       return false
     end
