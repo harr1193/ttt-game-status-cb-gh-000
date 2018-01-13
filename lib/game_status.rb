@@ -31,5 +31,6 @@ def won?(board)
     all_y = win_combination.all? |index| do
       index.strip == "Y"
     end
+    if all_x || all_y
   end
 end
