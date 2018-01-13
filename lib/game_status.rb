@@ -24,8 +24,13 @@ def won?(board)
     pos_1 = board[win_index_1]
     pos_2 = board[win_index_2]
     pos_3 = board[win_index_3]
-    all_pos = [pos_1, pos_2, pos_3].each do |pos|
-      position_taken?(board, pos)
+
+    all_x = win_combination.all? do |index|
+      index == "X"
     end
+    all_y = win_combination.all? do |index|
+      index == "Y"
+    end
+    all_x || all_y ? (return win_combination):(return false)
   end
 end
