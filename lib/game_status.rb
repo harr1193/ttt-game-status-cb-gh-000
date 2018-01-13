@@ -26,7 +26,7 @@ def won?(board)
     pos_3 = board[win_index_3]
 
     if position_taken(board, win_index_1) && position_taken(board, win_index_2) && position_taken(board, win_index_3)
-      ()[pos_1, pos_2, pos_3].uniq.count == 1) ? return win_combination : return false
+      ([pos_1, pos_2, pos_3].uniq.count == 1) ? return win_combination : return false
     else
       return false
     end
